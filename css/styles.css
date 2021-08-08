@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+body {    
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 400;
+    font-size: 16px;    
+    line-height: 1;    
+}
+h2{
+    padding-left: 20px;
+}
+p{
+    font-family: 'lato', sans-serif;
+    padding-left: 20px;
+}
