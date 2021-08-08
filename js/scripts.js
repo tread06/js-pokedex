@@ -6,4 +6,19 @@ let pokemonList = [
     {name: 'Pikachu', height: 0.4, types: ['Electric']}
 ];
 
-console.log(pokemonList);
+document.write('<h2>Pokemon Entries</h2>');
+for(let i=0;i<pokemonList.length;i++){
+    
+    document.write(`<p>${pokemonList[i].name} \(${pokemonList[i].height}\m) `);
+
+    //add highlight for pokemon larger than 0.5m
+    if(pokemonList[i].height > 0.5){
+        document.write('Wow, That\'s big!');
+    }
+
+    //add highlight for pokemon smaller than 0.5m
+    if(pokemonList[i].height < 0.5){
+        document.write('So tiny!');
+    }
+    document.write('</p>');
+}
