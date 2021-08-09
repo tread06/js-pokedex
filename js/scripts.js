@@ -29,10 +29,27 @@ let pokemonRepository = (function() {
     function get(name){
         return pokemonList.find(pokemon => pokemon.name === name);
     }
+    function addListItem(pokemon){
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('pokemon-list__button');        
+        listItem.appendChild(button);
+        listParent.appendChild(listItem);
+        addClickHandler(button,pokemon);
+    }   
+    function showDetailsEvent()
+    {
+        console.log(this);
+    }
+    function addClickHandler(button, pokemon) {
+        button.addEventListener('click', showDetailsEvent.bind(pokemon));
+    }    
     return{
         add:add,
         getAll:getAll,
-        get:get
+        get:get,
+        addListItem:addListItem
     };
 })();
 
@@ -45,35 +62,7 @@ pokemonRepository.add({name: 123, height: "0.5", types: ['Normal', 'Fairy']});
 pokemonRepository.add({name: "Charizard", extraParam: "invalid", height: 1.5, types: ['Fire']});
 pokemonRepository.add({height: 0.4, types: ['Electric']});
 
-//moved write into a new function since it's used in two places
-function writePokemon(pokemon)
-{
-    if(pokemon===undefined) {
-        return;
-    }    
-
-    document.write(`<p>${pokemon.name} \(${pokemon.height}\m) `);
-
-    //add text highlight for pokemon larger than 0.5m
-    if(pokemon.height > 0.5){
-        document.write('Wow, That\'s big!');
-    }
-    //add text highlight for pokemon smaller than 0.5m
-    if(pokemon.height < 0.5){
-        document.write('So tiny!');
-    }
-    document.write('</p>');
-}
-
-//write pokemon list
-document.write('<h2>Pokemon Entries</h2>');
+let listParent = document.querySelector('.pokemon-list');
 pokemonRepository.getAll().forEach( pokemon => {
-    writePokemon(pokemon);
+    pokemonRepository.addListItem(pokemon);
 });
-//write specific pokemon
-document.write('<h2>Get Specific Pokemon</h2>');
-writePokemon(pokemonRepository.get('Pikachu'));
-writePokemon(pokemonRepository.get('Charmander'));
-
-//test writing a specific pokemon that does not exist
-writePokemon(pokemonRepository.get('Charizard'));
