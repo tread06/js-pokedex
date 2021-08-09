@@ -10,8 +10,7 @@ let pokemonRepository = (function() {
     function add(pokemon){
         /*check if the pokemon param contains all properties.
         if only 3 properties exist, and that they are the correct types */        
-        if(typeof(pokemon) === 'object')
-        {
+        if(typeof(pokemon) === 'object'){
             if( 
                 typeof(pokemon.name) === 'string' &&
                 typeof(pokemon.height) === 'number' &&
