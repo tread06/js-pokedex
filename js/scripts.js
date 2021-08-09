@@ -36,13 +36,13 @@ let pokemonRepository = (function() {
         button.classList.add('pokemon-list__button');        
         listItem.appendChild(button);
         listParent.appendChild(listItem);
-        addClickHandler(button,pokemon);
+        addPokemonClickListener(button,pokemon);
     }   
     function showDetailsEvent()
     {
         console.log(this);
     }
-    function addClickHandler(button, pokemon) {
+    function addPokemonClickListener(button, pokemon) {
         button.addEventListener('click', showDetailsEvent.bind(pokemon));
     }    
     return{
