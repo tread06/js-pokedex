@@ -5,11 +5,9 @@ let pokemonRepository = (function() {
     let pokemonList = [
         {name: 'Bulbasaur', height: 0.7, types: ['Grass', 'Poison']},
         {name: 'Charmander', height: 0.6, types: ['Fire']},
-        {name: 'Squirtle', height: 0.5, types: ['Water']},
-        {name: 'Jigglypuff', height: 0.5, types: ['Normal', 'Fairy']},
-        {name: 'Pikachu', height: 0.4, types: ['Electric']}
+        {name: 'Squirtle', height: 0.5, types: ['Water']}
     ];
-    
+
     function add(pokemon){
         pokemonList.push(pokemon);
     }
@@ -21,6 +19,10 @@ let pokemonRepository = (function() {
         getAll:getAll
     };
 })();
+
+//add a couple pokemon for testing
+pokemonRepository.add({name: 'Pikachu', height: 0.4, types: ['Electric']});
+pokemonRepository.add({name: 'Jigglypuff', height: 0.5, types: ['Normal', 'Fairy']});
 
 document.write('<h2>Pokemon Entries</h2>');
 pokemonRepository.getAll().forEach( pokemon => {
