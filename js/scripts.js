@@ -9,18 +9,17 @@ let pokemonRepository = (function() {
 
     function add(pokemon){
         /*check if the pokemon param contains all properties.
-        if only 3 properties exist, and that they are the correct types */
-        if(typeof(pokemon === Object))
+        if only 3 properties exist, and that they are the correct types */        
+        if(typeof(pokemon) === 'object')
         {
-            if( typeof(pokemon.name) === 'string' &&
+            if( 
+                typeof(pokemon.name) === 'string' &&
                 typeof(pokemon.height) === 'number' &&
                 typeof(pokemon.types) === 'object' &&
-                Object.keys(pokemon).length === 3)
-            {
+                Object.keys(pokemon).length === 3
+            ){
                 pokemonList.push(pokemon);
-            }
-            else
-            {
+            }else{
                 console.warn('Pokemon is invalid. Cannot add to pokemon repository.');
             }
         }
