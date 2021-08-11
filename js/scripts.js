@@ -55,9 +55,9 @@ let pokemonRepository = (function () {
             return response.json();
         })
         .then(function (details) {
-            item.imageUrl = details.sprites.front_default;
-            item.height = details.height;
-            item.types = details.types;
+            // item.imageUrl = details.sprites.front_default;
+            // item.height = details.height;
+            // item.types = details.types;
             return details;
         })
         .catch(function (e) {
