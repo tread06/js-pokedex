@@ -158,19 +158,19 @@ let pokemonRepository = (function () {
         });
     }
     
-    //add show modal test button event
-    document.querySelector('#show-modal').addEventListener('pointerdown', () => { 
-        showModal('title', 'content');
-    });
+    // //add show modal test button event
+    // document.querySelector('#show-modal').addEventListener('pointerdown', () => { 
+    //     showModal('title', 'content');
+    // });
 
-    //add how dialog test button event    
-    document.querySelector('#show-dialog').addEventListener('pointerdown', () => {
-        showDialog('Confirm action', 'Are you sure you want to do this?').then(function() {
-            alert('confirmed!');
-        }, () => {
-            alert('not confirmed');
-        });
-    });
+    // //add how dialog test button event    
+    // document.querySelector('#show-dialog').addEventListener('pointerdown', () => {
+    //     showDialog('Confirm action', 'Are you sure you want to do this?').then(function() {
+    //         alert('confirmed!');
+    //     }, () => {
+    //         alert('not confirmed');
+    //     });
+    // });
 
     //bind close modal to escape key
     window.addEventListener('keydown', (e) => {       
