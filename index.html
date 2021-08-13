@@ -13,16 +13,24 @@
     
     <link rel="stylesheet" href="css/styles.css">
 
+    <!--pointer polyfill-->
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+
 </head>
 <body>
+    <button id='show-modal'>Show modal</button>
+    <button id='show-dialog'>Show dialog</button>
+    <div id='modal-container'></div>       
     <div class="pokedex">
         <h1>Pokedex</h1>
         <ul class="pokemon-list"></ul>
         <div class="spacer"></div>
     </div>    
+
+    <!-- promise polyfill -->
     <script src="js/promise-polyfill.js"></script>
-    <script src="js/fetch-polyfill.js"></script>
-    <script src="js/scripts.js"></script>
-    
+    <!-- fetch polyfill -->
+    <script src="js/fetch.umd.js"></script>    
+    <script src="js/scripts.js"></script>    
 </body>
 </html>
