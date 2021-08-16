@@ -17,10 +17,15 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         let listParent = document.querySelector(".pokemon-list");
         let listItem = document.createElement("li");
+        listItem.classList.add("list-group-item");
+
         let button = document.createElement("button");
         const capitalizedName =  pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-        button.innerText = capitalizedName;
-        button.classList.add("pokemon-list__button");
+        button.innerText = capitalizedName;        
+        button.classList.add("btn");
+        button.classList.add("btn-block");
+        button.classList.add("btn-primary");
+        
         listItem.appendChild(button);
         listParent.appendChild(listItem);
         addPokemonClickListener(button, pokemon);
