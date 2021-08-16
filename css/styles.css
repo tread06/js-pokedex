@@ -17,15 +17,18 @@ p{
     padding-left: 20px;
 }
 .pokedex{    
-    width: 20%;
-    min-width: 220px;
+    width: 40%;
+    min-width: 300px;
+    max-width: 500px;
     background-color: rgb(197, 60, 60);
     border-radius: 20px;
     margin: 30px auto;    
     border-bottom: rgb(151, 43, 70);
     border-bottom-width: 10px;
-    border-bottom-style: solid;    
-}.pokedex h1{
+    border-bottom-style: solid;  
+    
+}
+.pokedex h1{
     margin: auto;
     padding: 10px;
     text-align: center;
@@ -36,79 +39,26 @@ p{
     margin: 10px auto;
     width: 100%;
 
-    max-height: 500px;    
+    max-height: 75vh;    
     overflow-y:scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
-/* .pokemon-list__button{
-    font-family: 'lato', sans-serif;    
-    width: 80%;
-    padding: 5px 20px;
-    margin: 2px 10%;
-    border-radius: 10px;
-    background-color: white;    
-} */
-/* .pokemon-list__button:hover{
-    background-color: rgb(46, 92, 192);
-    color: white;
-} */
 .spacer{
-    height: 10px;
+    height: 20px;
 }
-
-#modal-container {
-    display: none;
-}
-#modal-container.is-visible {
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    
-    /* to show it above other content */
-    z-index: 999; 
-    
-    /* to allow scrolling if the screen is not high enough*/
-    overflow: auto; 
-    
-    /* this is used to center the modal */
-    display: grid;
-    text-align: center;    
-}
-.modal {
-    margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #fff;
-    padding: 15px;
-    width: 100%;
-    max-width: 400px;
-    text-align: left;
-    border-radius: 10px;
-}  
-.modal-close {
-    float: right;
-    -webkit-appearance: none;
-    border: 0;
-    background: none;
-    color: #777;
-    text-decoration: underline;
-}
-.modal__name {
+.modal__name {   
     margin-top: 0;
 }  
 .modal__height {
     margin: 4;
     padding: 0;
 }
+
 .modal__image {
     display: block;
-    margin: auto;    
+    margin: auto; 
+    width: 50%;      
 }
 
 /* to do: dont use scrolling if mobile
