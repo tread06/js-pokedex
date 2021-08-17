@@ -28,14 +28,34 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title  modal__name" id="pokemon-name">Pokemon Info</h5>
+            <h2 class="modal-title  modal__name" id="pokemon-name">Pokemon Info</h2>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
-            <div class="modal-body">                
-                <p id="pokemon-height" class ="modal__height">Height</p>
-                <img id="pokemon-image" class="img-fluid modal__image"></img>
+            <div class="modal-body">   
+                <img id="pokemon-image" class="img-fluid modal__image"></img>   
+                <div class="types-container">
+                    <div class="types__container-01 type">
+                        <p>Fire</p>
+                    </div>
+                    <div class="types__container-02 type">
+                        <p>Fighting</p>
+                    </div>
+                </div>         
+                <div class="info-container">
+                    <div class="info__box">
+                        <p>Height</p>
+                        <h3 id="pokemon-height">000</h3>
+                    </div>
+                    <div class="info__box">
+                        <p>Weight</p>
+                        <h3 id="pokemon-weight">000</h3>
+                    </div>
+                </div>  
+
+                <!-- <p id="pokemon-height" class ="modal__height">Height</p> -->
+                
             </div>
         </div>
         </div>

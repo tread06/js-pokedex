@@ -38,13 +38,16 @@ let pokemonRepository = (function () {
     function updatePokemonModalInfo() {
         loadDetails(this).then(function (pokemon) {
 
-            const height = 'Height: '+pokemon.height;
             const capitalizedName = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
             //update and show bootstrap modal
             $("#pokemon-name").text(capitalizedName);
-            $("#pokemon-height").text(height);
+            $("#pokemon-height").text(pokemon.height);
+            $("#pokemon-weight").text(pokemon.weight);
             $("#pokemon-image").attr("src", pokemon.sprites.front_default);
+
+            //types
+
             $("#pokemon-modal").modal('show');
 
         });

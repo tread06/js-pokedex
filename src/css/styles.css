@@ -45,10 +45,12 @@ p{
     -webkit-overflow-scrolling: touch;
 }
 .spacer{
-    height: 20px;
+    height: 30px;
 }
 .modal__name {   
     margin-top: 0;
+    text-align: center;
+    width: 100%;
 }  
 .modal__height {
     margin: 4;
@@ -60,3 +62,91 @@ p{
     margin: auto; 
     width: 50%;      
 }
+
+.types-container{
+
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 120px;
+    height: 100%;
+}
+.types__container-01{
+    background-color: rgb(231, 136, 10);    
+}
+.types__container-02{
+    background-color: rgb(226, 66, 66);    
+}
+.type{
+    display: inline-block;
+    color: white;
+    border-radius: 20px;
+    margin: 5px;
+    text-align: center;   
+    
+    height: 40px;
+    line-height: 40px;
+}
+.type p{
+    padding: 0 20px;
+}
+.info-container{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    display: flex;
+    align-items: center;  
+    flex-direction: column;  
+    justify-content: center;
+    width: 120px;
+    height: 100%;
+}
+
+.info__box{
+    background-color: rgb(58, 55, 99);
+    border-radius: 15px;  
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+.info__box p{
+    width: 100%;
+    text-align: center;
+    margin: 2px 0;
+    padding: 0;
+    color: white;
+}
+.info__box h3{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/*pokemon type colors*/
+.type-normal{ background-color: khaki; }
+.type-water{ background-color: rgb(216, 92, 21); }
+.type-grass{ background-color: rgb(51, 202, 31); }
+.type-electric{ background-color: rgb(216, 198, 36); }
+.type-ice{ background-color: rgb(129, 179, 212); }
+.type-fighting{ background-color: rgb(218, 45, 45); }
+.type-poison{ background-color: rgb(148, 52, 143); }
+.type-ground{ background-color: rgb(192, 158, 107); }
+.type-flying{ background-color: rgb(210, 145, 235); }
+.type-psychic{ background-color: rgb(241, 135, 135); }
+.type-bug{ background-color: rgb(199, 214, 60); }
+.type-rock{ background-color: rgb(177, 147, 93); }
+.type-ghost{ background-color: rgb(112, 88, 134); }
+.type-dark{ background-color: rgb(85, 84, 74); }
+.type-dragon{ background-color: rgb(126, 42, 182); }
+.type-steel{ background-color: rgb(155, 155, 155); }
+.type-fairy{ background-color: rgb(248, 203, 203); }
