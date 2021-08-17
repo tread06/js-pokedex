@@ -48,6 +48,31 @@ let pokemonRepository = (function () {
 
             //types
 
+            //assign name
+            $("#pokemon-type-01").text(pokemon.types[0].type.name);
+
+            //replace type class (last class)
+            var lastClass_01 = $(".types__container-01").attr('class').split(' ').pop();
+            $(".types__container-01").removeClass(lastClass_01);
+            $(".types__container-01").addClass("type-"+pokemon.types[0].type.name);
+            
+            //remove invisible first, then replace type class (last class)
+            $(".types__container-02").removeClass("invisible");
+
+            //update second type if it exists
+            if(pokemon.types.length > 1)
+            {
+                $("#pokemon-type-02").text(pokemon.types[1].type.name); 
+
+                var lastClass_02 = $(".types__container-02").attr('class').split(' ').pop();
+                $(".types__container-02").removeClass(lastClass_02);                
+                $(".types__container-02").addClass("type-"+ pokemon.types[1].type.name);
+            }
+            //hide second type
+            else
+            {
+                $(".types__container-02").addClass("invisible");
+            }
             $("#pokemon-modal").modal('show');
 
         });

@@ -22,10 +22,12 @@ p{
     max-width: 500px;
     background-color: rgb(197, 60, 60);
     border-radius: 20px;
-    margin: 30px auto;    
-    border-bottom: rgb(151, 43, 70);
-    border-bottom-width: 10px;
-    border-bottom-style: solid;  
+    margin: 30px auto; 
+
+    border-radius: 20px !important; 
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(197, 60, 60);
     
 }
 .pokedex h1{
@@ -61,6 +63,21 @@ p{
     display: block;
     margin: auto; 
     width: 50%;      
+}
+.modal-content  {
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-radius: 20px !important; 
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(197, 60, 60);
+    
+}
+.modal-header  {
+    background-color: rgb(197, 60, 60);
+    border-top-right-radius: 10px !important; 
+    border-top-left-radius: 10px !important; 
+    color: white;
 }
 
 .types-container{
@@ -110,7 +127,7 @@ p{
 }
 
 .info__box{
-    background-color: rgb(58, 55, 99);
+    background-color: #0d6efd;
     border-radius: 15px;  
     text-align: center;
     margin: 10px;
@@ -132,21 +149,41 @@ p{
     color: white;
 }
 
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 30px;
+}
+    
+    /* Track */
+::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255); 
+}
+    
+    /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+}
+    
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0c5cd3;
+}
+
 /*pokemon type colors*/
-.type-normal{ background-color: khaki; }
-.type-water{ background-color: rgb(216, 92, 21); }
-.type-grass{ background-color: rgb(51, 202, 31); }
-.type-electric{ background-color: rgb(216, 198, 36); }
-.type-ice{ background-color: rgb(129, 179, 212); }
+.type-normal{ background-color: rgb(196, 189, 131); }
+.type-water{ background-color: rgb(31, 29, 177); }
+.type-grass{ background-color: rgb(51, 182, 34); }
+.type-electric{ background-color: rgb(175, 160, 23); }
+.type-ice{ background-color: rgb(107, 148, 175); }
 .type-fighting{ background-color: rgb(218, 45, 45); }
 .type-poison{ background-color: rgb(148, 52, 143); }
-.type-ground{ background-color: rgb(192, 158, 107); }
-.type-flying{ background-color: rgb(210, 145, 235); }
-.type-psychic{ background-color: rgb(241, 135, 135); }
-.type-bug{ background-color: rgb(199, 214, 60); }
-.type-rock{ background-color: rgb(177, 147, 93); }
-.type-ghost{ background-color: rgb(112, 88, 134); }
-.type-dark{ background-color: rgb(85, 84, 74); }
-.type-dragon{ background-color: rgb(126, 42, 182); }
-.type-steel{ background-color: rgb(155, 155, 155); }
-.type-fairy{ background-color: rgb(248, 203, 203); }
+.type-ground{ background-color: rgb(170, 141, 98); }
+.type-flying{ background-color: rgb(178, 122, 201); }
+.type-psychic{ background-color: rgb(199, 114, 114); }
+.type-bug{ background-color: rgb(160, 175, 28); }
+.type-rock{ background-color: rgb(121, 100, 62); }
+.type-ghost{ background-color: rgb(81, 63, 97); }
+.type-dark{ background-color: rgb(53, 52, 46); }
+.type-dragon{ background-color: rgb(96, 35, 136); }
+.type-steel{ background-color: rgb(71, 71, 71); }
+.type-fairy{ background-color: rgb(197, 142, 142); }
