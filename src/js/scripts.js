@@ -9,9 +9,6 @@ let pokemonRepository = (function () {
     function getAll() {
         return pokemonList;
     }
-    function get(name) {
-        return pokemonList.find((pokemon) => pokemon.name === name);
-    }
     function addListItem(pokemon) {
 
         let listParent = document.querySelector(".pokemon-list");
@@ -24,12 +21,6 @@ let pokemonRepository = (function () {
         button.classList.add("btn");
         button.classList.add("btn-block");
         button.classList.add("btn-primary");
-
-        //this functionality was moved to the updatePokemonModalInfo function
-        //because the modal was appearing before the text could be updated.
-
-        //button.setAttribute("data-toggle","modal");
-        //button.setAttribute("data-target","#pokemon-modal");
 
         listItem.appendChild(button);
         listParent.appendChild(listItem);
@@ -114,7 +105,6 @@ let pokemonRepository = (function () {
     return {
         add: add,
         getAll: getAll,
-        get: get,
         addListItem: addListItem,
         loadList: loadList,
         loadDetails: loadDetails,

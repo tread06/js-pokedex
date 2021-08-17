@@ -1,3 +1,8 @@
+:root{
+    --main-blue: #0d6efd;
+    --highlight-blue: #0c5cd3;
+    --main-red: rgb(197, 60, 60);
+}
 * {
     margin: 0;
     padding: 0;
@@ -20,14 +25,14 @@ p{
     width: 40%;
     min-width: 300px;
     max-width: 500px;
-    background-color: rgb(197, 60, 60);
+    background-color: var(--main-red);
     border-radius: 20px;
     margin: 30px auto; 
 
     border-radius: 20px !important; 
     border-style: solid;
     border-width: 5px;
-    border-color: rgb(197, 60, 60);
+    border-color: var(--main-red);
     
 }
 .pokedex h1{
@@ -49,6 +54,9 @@ p{
 .spacer{
     height: 30px;
 }
+.modal-body{
+    min-height: 200px;
+}
 .modal__name {   
     margin-top: 0;
     text-align: center;
@@ -62,7 +70,7 @@ p{
 .modal__image {
     display: block;
     margin: auto; 
-    width: 50%;      
+    width: 50%;  
 }
 .modal-content  {
     -webkit-border-radius: 20px !important;
@@ -70,22 +78,20 @@ p{
     border-radius: 20px !important; 
     border-style: solid;
     border-width: 5px;
-    border-color: rgb(197, 60, 60);
+    border-color: var(--main-red);
     
 }
 .modal-header  {
-    background-color: rgb(197, 60, 60);
+    background-color: var(--main-red);
     border-top-right-radius: 10px !important; 
     border-top-left-radius: 10px !important; 
     color: white;
 }
 
 .types-container{
-
     position: absolute;
     right: 0px;
     top: 0px;
-
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -95,10 +101,10 @@ p{
     height: 100%;
 }
 .types__container-01{
-    background-color: rgb(231, 136, 10);    
+    background-color: black  
 }
 .types__container-02{
-    background-color: rgb(226, 66, 66);    
+    background-color: black;    
 }
 .type{
     display: inline-block;
@@ -106,7 +112,6 @@ p{
     border-radius: 20px;
     margin: 5px;
     text-align: center;   
-    
     height: 40px;
     line-height: 40px;
 }
@@ -117,7 +122,6 @@ p{
     position: absolute;
     left: 0px;
     top: 0px;
-
     display: flex;
     align-items: center;  
     flex-direction: column;  
@@ -127,7 +131,7 @@ p{
 }
 
 .info__box{
-    background-color: #0d6efd;
+    background-color: var(--main-blue);;
     border-radius: 15px;  
     text-align: center;
     margin: 10px;
@@ -156,17 +160,17 @@ p{
     
     /* Track */
 ::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255); 
+    background: white; 
 }
     
     /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #0d6efd;
+    background: var(--main-blue);
 }
     
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #0c5cd3;
+    background: var(--highlight-blue);
 }
 
 #pokemon-list-input{
@@ -176,6 +180,7 @@ p{
 
 /*pokemon type colors*/
 .type-normal{ background-color: rgb(196, 189, 131); }
+.type-fire{ background-color: rgb(218, 105, 0); }
 .type-water{ background-color: rgb(31, 29, 177); }
 .type-grass{ background-color: rgb(51, 182, 34); }
 .type-electric{ background-color: rgb(175, 160, 23); }
