@@ -37,17 +37,18 @@ let pokemonRepository = (function () {
             $("#pokemon-weight").text(pokemon.weight);
             $("#pokemon-image").attr("src", pokemon.sprites.front_default);
 
-            //types
+            //update alt text for pokemon image
+            $("#pokemon-image").attr("alt", pokemon.name + " image");
 
-            //assign name
+            //update types
             $("#pokemon-type-01").text(pokemon.types[0].type.name);
 
-            //replace type class (last class)
+            //replace type color class (last class)
             var lastClass_01 = $(".types__container-01").attr('class').split(' ').pop();
             $(".types__container-01").removeClass(lastClass_01);
             $(".types__container-01").addClass("type-"+pokemon.types[0].type.name);
             
-            //remove invisible first, then replace type class (last class)
+            //remove invisible first to ensure that the color is the last class
             $(".types__container-02").removeClass("invisible");
 
             //update second type if it exists
@@ -59,11 +60,12 @@ let pokemonRepository = (function () {
                 $(".types__container-02").removeClass(lastClass_02);                
                 $(".types__container-02").addClass("type-"+ pokemon.types[1].type.name);
             }
-            //hide second type
+            //hide second type if there is only one type
             else
             {
                 $(".types__container-02").addClass("invisible");
             }
+            //show modal
             $("#pokemon-modal").modal('show');
 
         });
