@@ -169,6 +169,11 @@ p{
     background: #0c5cd3;
 }
 
+#pokemon-list-input{
+    width: 90%;
+    margin: auto;
+}
+
 /*pokemon type colors*/
 .type-normal{ background-color: rgb(196, 189, 131); }
 .type-water{ background-color: rgb(31, 29, 177); }
