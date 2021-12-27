@@ -17,7 +17,7 @@ No frontend framework? No Problem. This project serves as an example of how to r
 The core concepts explored in this project:
 * Retrieve data from an API using ajax.
 * Code linting and complying with accessibility standards.
-* DOM manipulation ising JQuery.
+* DOM manipulation using JQuery.
 * Project minifying without using build tools.
 
 
